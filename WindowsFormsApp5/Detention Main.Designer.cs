@@ -1,5 +1,10 @@
 ﻿namespace WindowsFormsApp5
 {
+    /*Taco Tuesday but on a wednesday
+
+
+
+    */
     partial class MainDetention
     {
         /// <summary>
