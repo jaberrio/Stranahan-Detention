@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VFPData>
+  <student>
+    <student_ID>0604117127</student_ID>
+    <reason>Defience</reason>
+    <time>7:43 PM</time>
+    <date>7/1/2018</date>
+    <robo_call>false</robo_call>
+    <served>false</served>
+    <date_to_serve>7:43 PM</date_to_serve>
+  </student>
+  <student>
+    <student_ID>0604117127</student_ID>
+    <reason>Defience</reason>
+    <time>7:44 PM</time>
+    <date>7/1/2018</date>
+    <robo_call>false</robo_call>
+    <served>false</served>
+    <date_to_serve>7/4/2018</date_to_serve>
+  </student>
+</VFPData>
