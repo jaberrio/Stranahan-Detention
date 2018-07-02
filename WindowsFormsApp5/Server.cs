@@ -42,6 +42,8 @@ namespace WindowsFormsApp5
 
             string[] urlS = url.Split('/');
 
+            //example /id/
+
             switch(urlS[1])
             {
                 case "id":

@@ -1,10 +1,5 @@
 ﻿namespace WindowsFormsApp5
 {
-    /*Taco Tuesday but on a wednesday
-
-
-
-    */
     partial class MainDetention
     {
         /// <summary>
@@ -224,7 +219,7 @@
             // unservedToolStripMenuItem
             // 
             this.unservedToolStripMenuItem.Name = "unservedToolStripMenuItem";
-            this.unservedToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.unservedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unservedToolStripMenuItem.Text = "Unserved";
             // 
             // roboCallToolStripMenuItem
@@ -233,7 +228,7 @@
             this.adminToolStripMenuItem,
             this.nonAdminToolStripMenuItem});
             this.roboCallToolStripMenuItem.Name = "roboCallToolStripMenuItem";
-            this.roboCallToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.roboCallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.roboCallToolStripMenuItem.Text = "Robo Call";
             // 
             // adminToolStripMenuItem
@@ -325,6 +320,7 @@
             this.customFieldToolStripMenuItem.Name = "customFieldToolStripMenuItem";
             this.customFieldToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.customFieldToolStripMenuItem.Text = "Custom Field";
+            this.customFieldToolStripMenuItem.Click += new System.EventHandler(this.customFieldToolStripMenuItem_Click);
             // 
             // studentDatabaseToolStripMenuItem
             // 

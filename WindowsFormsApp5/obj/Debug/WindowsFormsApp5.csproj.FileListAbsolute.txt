@@ -4039,3 +4039,13 @@ G:\Desktop\Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.ServerRecorder.
 G:\Desktop\Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.ModeSelection.resources
 G:\Desktop\Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
 G:\Desktop\Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.Cache
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csprojAssemblyReference.cache
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.MainDetention.resources
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.LogOn.resources
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.ServerRecorder.resources
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.ModeSelection.resources
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.cache
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CoreCompileInputs.cache
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\Jaberrio\Source\Repos\Stranahan-Detention\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb

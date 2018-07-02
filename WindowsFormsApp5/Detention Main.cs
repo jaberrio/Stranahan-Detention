@@ -79,6 +79,11 @@ namespace WindowsFormsApp5
         {
             label7.Show();
         }
+
+        private void customFieldToolStripMenuItem_Click(object sender , EventArgs e)
+        {
+
+        }
     }
 }
 

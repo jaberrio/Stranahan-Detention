@@ -21,8 +21,12 @@ namespace WindowsFormsApp5
         {
             this.Hide();
             
-            long authnKey;
+            long authnKey = 0;
 
+            var lo = new LogOn();
+
+            authnKey = lo.authenKey;
+            
             new MainDetention(authnKey).ShowDialog();
             this.Show();
         }
