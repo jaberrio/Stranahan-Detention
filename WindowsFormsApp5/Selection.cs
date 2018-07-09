@@ -24,6 +24,7 @@ namespace WindowsFormsApp5
             long authnKey = 0;
 
             var lo = new LogOn();
+            lo.ShowDialog();
 
             authnKey = lo.authenKey;
             

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 using System.Text;
 
@@ -15,10 +16,7 @@ namespace SimpleWebServer
 
         public WebServer(string[] prefixes , Func<HttpListenerRequest , string> method)
         {
-            if(!HttpListener.IsSupported)
-                throw new NotSupportedException(
-                    "Needs Windows XP SP2, Server 2003 or later.");
-
+            
             // URI prefixes are required, for example 
             // "http://localhost:8080/index/".
             if(prefixes == null || prefixes.Length == 0)
@@ -41,16 +39,16 @@ namespace SimpleWebServer
 
         public void Run()
         {
-            ThreadPool.QueueUserWorkItem((o) =>
+            ThreadPool.QueueUserWorkItem((webMaster) =>
             {
                 Console.WriteLine("Webserver running...");
                 try
                 {
                     while(_listener.IsListening)
                     {
-                        ThreadPool.QueueUserWorkItem((c) =>
+                        ThreadPool.QueueUserWorkItem((webChild) =>
                         {
-                            var ctx = c as HttpListenerContext;
+                            var ctx = webChild as HttpListenerContext;
                             try
                             {
                                 string rstr = _responderMethod(ctx.Request);
@@ -78,5 +76,65 @@ namespace SimpleWebServer
             _listener.Stop();
             _listener.Close();
         }
+    }
+    public class TcpServer
+    {
+        //Force any Ip adresss, this is really bad practirce but BCPS doesn't know how to do anything corretly so w.e
+        //Also the Port must be 6666 because logic need to apply
+        private readonly TcpListener _tcpListener = new TcpListener(IPAddress.Any,6666);
+        
+        //Function that will procress the client TCP request
+        private readonly Func<TcpClient,NetworkStream,string,string> procClientRec;
+
+        public TcpServer(Func<TcpClient , NetworkStream , string , string> p)
+        {
+            procClientRec = p;
+            _tcpListener.Start();
+             
+             
+        }
+
+        public void run()
+        {
+            ThreadPool.QueueUserWorkItem((tcpMaster) =>
+            {
+                Console.WriteLine("Master TCP server Running");
+
+                while(true)
+                {
+                    TcpClient c = _tcpListener.AcceptTcpClient();
+
+                    ThreadPool.QueueUserWorkItem((tcpChild) =>
+                    {
+
+                        NetworkStream stream = c.GetStream();
+                        Byte[] bytes = new Byte[256];
+
+                        int i;
+
+                        while((i = stream.Read(bytes , 0 , bytes.Length)) != 0)
+                        {
+
+                            String data = null;
+
+                            // Translate data bytes to a ASCII string.
+                            data = Encoding.UTF8.GetString(bytes , 0 , i);
+                            
+                            procClientRec(c , stream , data);
+
+                        }
+                        c.Close();
+                    });
+                    
+                }
+            });
+        }
+
+        public void stop()
+        {
+            _tcpListener.Stop();
+            
+        }
+
     }
 }

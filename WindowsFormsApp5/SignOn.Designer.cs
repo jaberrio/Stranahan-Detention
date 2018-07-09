@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // logB
@@ -96,6 +97,10 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Server Health: OFFLINE";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.checkServerStatues);
+            // 
             // LogOn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -127,5 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

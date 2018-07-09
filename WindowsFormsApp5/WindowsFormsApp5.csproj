@@ -52,7 +52,7 @@
       <DependentUpon>SignOn.cs</DependentUpon>
     </Compile>
     <Compile Include="Support.cs" />
-    <Compile Include="WebServer.cs" />
+    <Compile Include="ServerFrameWork.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Detention Main.cs">
       <SubType>Form</SubType>

@@ -128,7 +128,7 @@ namespace WindowsFormsApp5
 
         public static string formatHTMLTable(XmlNodeList nodeL)
         {
-            StringBuilder html = new StringBuilder(250);
+            var html = new StringBuilder(250);
 
             html.Append("<h2>All Detention's on File</h2> <table style=\"width:50%\">");
 

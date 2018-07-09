@@ -68,6 +68,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dayS = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dayS)).BeginInit();
@@ -219,7 +220,7 @@
             // unservedToolStripMenuItem
             // 
             this.unservedToolStripMenuItem.Name = "unservedToolStripMenuItem";
-            this.unservedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.unservedToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.unservedToolStripMenuItem.Text = "Unserved";
             // 
             // roboCallToolStripMenuItem
@@ -228,7 +229,7 @@
             this.adminToolStripMenuItem,
             this.nonAdminToolStripMenuItem});
             this.roboCallToolStripMenuItem.Name = "roboCallToolStripMenuItem";
-            this.roboCallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.roboCallToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.roboCallToolStripMenuItem.Text = "Robo Call";
             // 
             // adminToolStripMenuItem
@@ -426,11 +427,21 @@
             0,
             0});
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 462);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(144, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Connection Status: OFFLINE";
+            // 
             // MainDetention
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 484);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dayS);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -499,6 +510,7 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nonAdminToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown dayS;
+        private System.Windows.Forms.Label label9;
     }
 }
 

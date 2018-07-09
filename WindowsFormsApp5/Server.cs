@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,8 @@ namespace WindowsFormsApp5
     public partial class ServerRecorder : Form
     {
         static DatabaseMain db;
+        static WebServer ws;
+        static TcpServer ts;
 
         public ServerRecorder()
         {
@@ -27,9 +30,10 @@ namespace WindowsFormsApp5
         {
             if(checkBox1.Checked)
             {
-                WebServer ws = new WebServer(SendResponse, "http://localhost:8080/");
+                ws = new WebServer(SendResponse , "http://localhost:8080/");
                 ws.Run();
             }
+            else ws.Stop();
         }
 
 
@@ -80,8 +84,22 @@ namespace WindowsFormsApp5
                 );
         }
 
+        private void checkBox2_CheckedChanged(object sender , EventArgs e)
+        {
+            if(checkBox2.Checked)
+            {
+                ts = new TcpServer(tcpDataPro);
+                ts.run();
+            }
+            else ts.stop();
+        }
 
+        private string tcpDataPro(TcpClient tcpClient , NetworkStream networkStream , string data)
+        {
 
+            Console.WriteLine("Received: {0}" , data);
 
+            return null;
+        }
     }
 }

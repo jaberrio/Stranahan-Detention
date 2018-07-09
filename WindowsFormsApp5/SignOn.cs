@@ -17,6 +17,9 @@ namespace WindowsFormsApp5
         public LogOn()
         {
             InitializeComponent();
+            timer1.Interval = 5000;
+            timer1.Start();
+            
             
         }
 
@@ -28,6 +31,11 @@ namespace WindowsFormsApp5
         private void textBox2_TextChanged(object sender , EventArgs e)
         {
 
+        }
+
+        private void checkServerStatues(object sender , EventArgs e)
+        {
+            Console.WriteLine(Support.checkAllServerStat());
         }
     }
 }

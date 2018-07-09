@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Sockets;
+using System.Net;
 
 namespace WindowsFormsApp5
 {
@@ -41,6 +43,35 @@ namespace WindowsFormsApp5
             return date.AddDays(extraDays);
         }
 
+        public static Boolean checkAllServerStat()
+        {
+            try
+            {
+                var endPoint = new IPEndPoint(IPAddress.Parse("10.0.0.131"),6666);
+                var c = new TcpClient();
 
+                c.Connect(endPoint);
+
+                NetworkStream s = c.GetStream();
+
+                Byte[] data = Encoding.UTF8.GetBytes("Hello Friend");
+
+                s.Write(data , 0 , data.Length);
+
+                return true;
+
+            } catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("CONNECTION ERROR");
+            }
+
+            return true;
+            
+        }
+        
     }
+
+    
+
 }
